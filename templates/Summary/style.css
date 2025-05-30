@@ -1,0 +1,167 @@
+/* Main Body */
+@page {
+	margin-top: 1cm;
+	margin-bottom: 3cm;
+	margin-left: 2cm;
+	margin-right: 2cm;
+}
+body {
+	background: #fff;
+	color: #000;
+	margin: 0cm;
+	font-family: 'Open Sans', sans-serif;
+	/* want to use custom fonts? http://docs.wpovernight.com/woocommerce-pdf-invoices-packing-slips/using-custom-fonts/ */
+	font-size: 9pt;
+	line-height: 100%; /* fixes inherit dompdf bug */
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h1 {
+	font-size: 16pt;
+	margin: 5mm 0;
+}
+
+h2 {
+	font-size: 14pt;
+}
+
+h3, h4 {
+	font-size: 9pt;
+}
+
+
+ol,
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li,
+ul {
+	margin-bottom: 0.75em;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+p + p {
+	margin-top: 1.25em;
+}
+
+a { 
+	border-bottom: 1px solid; 
+	text-decoration: none; 
+}
+
+/* Basic Table Styling */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	page-break-inside: always;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+th, td {
+	vertical-align: top;
+	text-align: left;
+}
+
+table.container {
+	width:100%;
+	border: 0;
+}
+
+div.bottom-spacer {
+	clear: both;
+	height: 8mm;
+}
+
+/* Header */
+.document-type-label {
+	text-transform: uppercase;
+}
+
+/* Summary Header */
+table.summary-header {
+	margin-bottom: 8mm;
+}
+
+table.summary-header td {
+	width: 40%;
+}
+
+table.summary-header td table {
+	width: 100%;
+}
+
+table.summary-header td table th {
+	font-weight: normal;
+	padding-right: 2mm;
+	width: 50%;
+}
+
+/* Summary Data */
+table.summary-details {
+	width:100%;
+	margin-bottom: 8mm;
+	page-break-before: avoid;
+}
+
+.order-total {
+	width: 20%;
+}
+
+.last-column {
+	text-align: right;
+}
+
+table.summary-details tr {
+	page-break-inside: always;
+	page-break-after: auto;	
+}
+
+table.summary-details td,
+table.summary-details th {
+	border-bottom: 1px #ccc solid;
+	border-top: 1px #ccc solid;
+	padding: 0.375em;
+}
+
+table.summary-details th {
+	font-weight: bold;
+}
+
+table.summary-details thead th {
+	color: white;
+	background-color: black;
+	border-color: black;
+}
+
+/* Totals */
+table.summary-totals {
+	width: 30%;
+	margin-top: 5mm;
+	table-layout: fixed;
+	float: right;
+}
+
+table.summary-totals th,
+table.summary-totals td {
+	border: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+table.summary-totals th.label,
+table.summary-totals td.total {
+	width: 50%;
+}
